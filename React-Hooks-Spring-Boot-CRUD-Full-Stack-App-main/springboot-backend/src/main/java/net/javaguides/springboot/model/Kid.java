@@ -19,12 +19,12 @@ public class Kid {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @Column(name="name_")
+    @Column(name = "name_")
     private String fullName;
-    @Column(name="bill")
+    @Column(name = "bill")
     private Double bill;
-    @Column(name="accountNum")
+    @Column(name = "IBAN")
     private Integer account;
-    @Column(name="kindergartenNum")
+    @Column(name = "preschool")
     private Integer kindergarten;
 }

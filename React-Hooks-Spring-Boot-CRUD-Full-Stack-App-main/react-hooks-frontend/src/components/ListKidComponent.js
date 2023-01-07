@@ -4,7 +4,7 @@ import KidService from '../services/KidService'
 
 const ListKidComponent = () => {
 
-    const [employees, setKids] = useState([])
+    const [kids, setKids] = useState([])
 
     useEffect(() => {
 
@@ -20,8 +20,8 @@ const ListKidComponent = () => {
         })
     }
 
-    const deleteKid = (employeeId) => {
-       KidService.deleteKid(employeeId).then((response) =>{
+    const deleteKid = (kidId) => {
+       KidService.deleteKid(kidId).then((response) =>{
         getAllKids();
 
        }).catch(error =>{
@@ -33,7 +33,7 @@ const ListKidComponent = () => {
     return (
         <div className = "container">
             <h2 className = "text-center"> List Kids </h2>
-            <Link to = "/add-employee" className = "btn btn-primary mb-2" > Add Kid </Link>
+            <Link to = "/add-kid" className = "btn btn-primary mb-2" > Add Kid </Link>
             <table className="table table-bordered table-striped">
                 <thead>
                     <th> Kid Id </th>
@@ -45,17 +45,17 @@ const ListKidComponent = () => {
                 </thead>
                 <tbody>
                     {
-                        employees.map(
-                            employee =>
-                            <tr key = {employee.id}> 
-                                <td> {employee.id} </td>
-                                <td> {employee.fullName} </td>
-                                <td>{employee.bill}</td>
-                                <td>{employee.account}</td>
-                                <td>{employee.kindergarten}</td>
+                        kids.map(
+                            kid =>
+                            <tr key = {kid.id}>
+                                <td> {kid.id} </td>
+                                <td> {kid.fullName} </td>
+                                <td>{kid.bill}</td>
+                                <td>{kid.account}</td>
+                                <td>{kid.kindergarten}</td>
                                 <td>
-                                    <Link className="btn btn-info" to={`/edit-employee/${employee.id}`} >Update</Link>
-                                    <button className = "btn btn-danger" onClick = {() => deleteKid(employee.id)}
+                                    <Link className="btn btn-info" to={`/edit-kid/${kid.id}`} >Update</Link>
+                                    <button className = "btn btn-danger" onClick = {() => deleteKid(kid.id)}
                                     style = {{marginLeft:"10px"}}> Delete</button>
                                 </td>
                             </tr>

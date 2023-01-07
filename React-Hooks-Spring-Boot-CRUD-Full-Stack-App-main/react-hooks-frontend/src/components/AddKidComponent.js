@@ -74,7 +74,7 @@ const AddKidComponent = () => {
                                     <input
                                         type = "text"
                                         placeholder = "Enter name"
-                                        name = "name"
+                                        name = "fullName"
                                         className = "form-control"
                                         value = {fullName}
                                         onChange = {(e) => setFullName(e.target.value)}
