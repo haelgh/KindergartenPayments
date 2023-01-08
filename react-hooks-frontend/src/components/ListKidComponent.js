@@ -53,7 +53,7 @@ const ListKidComponent = () => {
                                 <td>{kid.kindergarten}</td>
                                 <td>
                                     <Link className='btn btn-info' to ={`/edit-kid/${kid.id}`}>Edit</Link>
-                                    <button className='btn btn-danger' onClick={() => deleteKid(kid.id)} style={{"margin-left":"10px"}}>Delete</button>
+                                    <button className='btn btn-danger' onClick={() => deleteKid(kid.id)} style={{"margin-left":"15px"}}>Delete</button>
                                 </td>
                             </tr>
                         )
