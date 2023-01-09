@@ -18,20 +18,14 @@ const AddKidComponent = () => {
 
         if(id){
             KidServices.updateKid(id, kid).then((response) => {
-                navigate('/');
+                navigate('/kids');
             }).catch(error => {
                 console.log(error)
             })
-
         }else{
             KidServices.createKid(kid).then((response) =>{
-
                 console.log(response.data)
-                
-                navigate('/');
-
-                
-    
+                navigate('/kids');
             }).catch(error => {
                 console.log(error)
             })
@@ -123,7 +117,7 @@ const AddKidComponent = () => {
                                     </input>
                                 </div>
                                 <button className = "btn btn-success" onClick = {(e) => saveOrUpdateKid(e)} >Submit </button>
-                                <Link to="/" className="btn btn-danger" style={{"margin-left":"235px"}}> Cancel </Link>
+                                <Link to="/kids" className="btn btn-danger" style={{"margin-left":"235px"}}> Cancel </Link>
                             </form>
 
                         </div>

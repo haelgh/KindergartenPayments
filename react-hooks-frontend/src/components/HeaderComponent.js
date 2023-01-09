@@ -7,7 +7,7 @@ const HeaderComponent = () =>{
             <header>
                 <nav className='navbar navbar-expand-md navbar-dark bg-dark'>
                     <div className='header'>
-                        <a href='localhost:3000/'>
+                        <a href='localhost:3000/kids'>
                             Kindergartens' Accounting System
                         </a>
                     </div>
